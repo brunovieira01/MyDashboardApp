@@ -9,6 +9,9 @@ df = df.groupby(['State', 'ANSI', 'Affected by', 'Year', 'state_code'])[['Pct of
 # Create Dash app
 app = Dash(__name__)
 
+# To create public server
+server = app.server
+
 # Get all unique bee diseases
 all_diseases = df['Affected by'].unique()
 
